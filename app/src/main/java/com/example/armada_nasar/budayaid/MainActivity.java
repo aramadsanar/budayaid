@@ -1,8 +1,10 @@
 package com.example.armada_nasar.budayaid;
 
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -37,6 +39,10 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public boolean onMarkerClick(Marker marker) {
         Toast.makeText(getApplicationContext(), "NOT IMPLEMENTED YET!", Toast.LENGTH_LONG).show();
+        Intent i  = new Intent(MainActivity.this, ViewBudayaActivity.class);
+        i.putExtra("province", marker.getTitle());
+        startActivity(i);
+
         return true;
     }
 }
