@@ -86,7 +86,8 @@ def add_budaya():
 		
 		return redirect(url_for('add_budaya'))
 	else:
-		return render_template('budayaid_add_budaya_page.html')
+		provinces = session.query(Province).all()
+		return render_template('budayaid_add_budaya_page.html', provinces=provinces)
 
 @app.route('/getImage/<string:image_file_name>/')
 def get_image(image_file_name):
