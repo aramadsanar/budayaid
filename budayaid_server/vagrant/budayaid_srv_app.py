@@ -7,7 +7,7 @@ from werkzeug import secure_filename
 from pathlib import Path
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './imagepool/'
-ALLOWED_EXTENSIONS = set(['png', 'jpg'])
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 engine = create_engine('sqlite:///budayaid.db?check_same_thread=False')
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
@@ -53,9 +53,11 @@ def add_budaya():
 
 		if image_file.filename == '':
 			flash("Filename could not be empty!")
+			print("Filename could not be empty!")
 			return redirect(url_for('add_budaya'))
 		if not allowed_file(image_file.filename):
 			flash("File type is not alowed!")
+			print("Filename could not be empty!")
 			return redirect(url_for('add_budaya'))
 
 		image_url = ""
@@ -71,13 +73,16 @@ def add_budaya():
 
 		name=request.form['name']
 		description=request.form['description']
-		
+		prov_val = request.form['province']
+		print("hahahihi")
+		print(prov_val)
+		province = session.query(Province).filter_by(id=int(prov_val)).first()
 		google_search_term = request.form['google_search_term']
 
 		#WARNING: Dummy province in use! REPLACE BEFORE RELEASE!
 		dumprov = session.query(Province).filter_by(name='dummytes').first()
 		
-		newBudaya = Budaya(name=name, description=description, image_url=image_url, google_search_term=google_search_term, province=dumprov)
+		newBudaya = Budaya(name=name, description=description, image_url=image_url, google_search_term=google_search_term, province=province)
 		
 		session.add(newBudaya)
 		session.commit()
