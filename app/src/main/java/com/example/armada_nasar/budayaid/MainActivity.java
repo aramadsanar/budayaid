@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -13,19 +14,23 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.squareup.picasso.Picasso;
 
-public class MainActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SupportMapFragment smf = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        smf.getMapAsync(this);
+       // SupportMapFragment smf = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        //smf.getMapAsync(this);
+        String imageUri = "http://35.198.228.52:6014/getImage/5f7.jpg/";
+        ImageView ivBasicImage = (ImageView) findViewById(R.id.tes);
+        Picasso.with(getApplicationContext()).load(imageUri).into(ivBasicImage);
     }
 
-    @Override
+    /*@Override
     public void onMapReady(GoogleMap googleMap) {
         googleMap.setOnMarkerClickListener(this);
         LatLng tes = new LatLng(-1, 1);
@@ -44,5 +49,5 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         startActivity(i);
 
         return true;
-    }
+    }*/
 }

@@ -98,7 +98,7 @@ def add_budaya():
 		categories = session.query(Categories).all()
 		return render_template('budayaid_add_budaya_page.html', provinces=provinces, categories=categories)
 
-@app.route('/getImage/<string:image_file_name>/')
+@app.route('/getImage/<string:image_file_name>')
 def get_image(image_file_name):
 	path = os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(image_file_name))
 	print(path)

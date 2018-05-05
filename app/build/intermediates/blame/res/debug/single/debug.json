@@ -36,20 +36,20 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_connecting_02_light.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_mr_button_connecting_24_light.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xhdpi-v4/ic_mr_button_connecting_24_light.png"
-    },
-    {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_cast_abc_scrubber_control_off_mtrl_alpha.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable-hdpi-v4/cast_abc_scrubber_control_off_mtrl_alpha.png"
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-watch-v20_common_google_signin_btn_text_dark_normal.xml.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-auth-12.0.1.aar/d8b7eb442b3f925670b31ea20f5270df/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_cast_ic_notification_2.png.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-12.0.1.aar/077bda0ee29a16ca106a8d32bf1ec68d/res/drawable-mdpi-v4/cast_ic_notification_2.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-watch-v20_common_google_signin_btn_text_dark_normal.xml.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-auth-12.0.1.aar/d8b7eb442b3f925670b31ea20f5270df/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_cast_abc_scrubber_control_off_mtrl_alpha.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable-hdpi-v4/cast_abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_mr_button_connecting_24_light.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xhdpi-v4/ic_mr_button_connecting_24_light.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -84,12 +84,12 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
-    },
-    {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_cast_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable-mdpi-v4/cast_abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_08_dark.png.flat",
@@ -116,16 +116,16 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable-mdpi-v4/quantum_ic_skip_next_white_36.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_quantum_ic_cast_white_36.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable-mdpi-v4/quantum_ic_cast_white_36.png"
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_light.xml.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/color/abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png"
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_quantum_ic_cast_white_36.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable-mdpi-v4/quantum_ic_cast_white_36.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_mr_button_connecting_14_dark.png.flat",
@@ -216,12 +216,12 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-mdpi-v4/ic_vol_type_tv_light.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_places_ic_clear.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-places-12.0.1.aar/4280f6f557d7ded0453c0d2384b2f515/res/drawable-hdpi-v4/places_ic_clear.png"
-    },
-    {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_17_light.png.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_connecting_17_light.png"
+    },
+    {
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_places_ic_clear.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-places-12.0.1.aar/4280f6f557d7ded0453c0d2384b2f515/res/drawable-hdpi-v4/places_ic_clear.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/color_wallet_secondary_text_holo_dark.xml.flat",
@@ -236,20 +236,20 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/3a472856180cb3a3b42844de0bd865c8/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_plusone_tall_off_client.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-plus-12.0.1.aar/c8a5593698760874c849ed8b6ef77159/res/drawable-hdpi-v4/ic_plusone_tall_off_client.png"
-    },
-    {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/drawable-hdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_23_light.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_connecting_23_light.png"
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_plusone_tall_off_client.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-plus-12.0.1.aar/c8a5593698760874c849ed8b6ef77159/res/drawable-hdpi-v4/ic_plusone_tall_off_client.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_20_dark.png.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_connecting_20_dark.png"
+    },
+    {
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_23_light.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_connecting_23_light.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_20_light.png.flat",
@@ -264,12 +264,12 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-base-12.0.1.aar/c011ca7c940c5e41f6591626d3d9ea96/res/drawable/common_google_signin_btn_text_dark_focused.xml"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_11_light.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_connecting_11_light.png"
-    },
-    {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_quantum_ic_forward_30_grey600_36.png.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable-hdpi-v4/quantum_ic_forward_30_grey600_36.png"
+    },
+    {
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_11_light.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_connecting_11_light.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_grey.png.flat",
@@ -292,12 +292,12 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_connected_19_light.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_vol_type_speaker_light.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xhdpi-v4/ic_vol_type_speaker_light.png"
-    },
-    {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connected_13_light.png.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_connected_13_light.png"
+    },
+    {
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_vol_type_speaker_light.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xhdpi-v4/ic_vol_type_speaker_light.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -328,12 +328,12 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_media_pause_light.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_media_stop_light.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_media_stop_light.png"
-    },
-    {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_mr_button_connecting_07_dark.png.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xhdpi-v4/ic_mr_button_connecting_07_dark.png"
+    },
+    {
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_media_stop_light.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_media_stop_light.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_mr_button_connecting_03_light.png.flat",
@@ -372,12 +372,12 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xhdpi-v4/ic_mr_button_connecting_06_light.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png"
-    },
-    {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable_mr_media_play_dark.xml.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable/mr_media_play_dark.xml"
+    },
+    {
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -404,12 +404,12 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_connecting_26_light.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_29_light.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_connecting_29_light.png"
-    },
-    {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_quantum_ic_skip_next_white_36.png.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable-xhdpi-v4/quantum_ic_skip_next_white_36.png"
+    },
+    {
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_29_light.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_connecting_29_light.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_quantum_ic_refresh_white_24.png.flat",
@@ -484,12 +484,12 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xhdpi-v4/ic_mr_button_connected_22_dark.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_half_black_36dp.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/drawable-mdpi-v4/abc_ic_star_half_black_36dp.png"
-    },
-    {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable_cast_ic_mini_controller_pause.xml.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable/cast_ic_mini_controller_pause.xml"
+    },
+    {
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_star_half_black_36dp.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/drawable-mdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connecting_06_dark.png.flat",
@@ -560,12 +560,12 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/color/abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/layout_place_autocomplete_item_prediction.xml.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-places-12.0.1.aar/4280f6f557d7ded0453c0d2384b2f515/res/layout/place_autocomplete_item_prediction.xml"
-    },
-    {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable_mr_button_connecting_light.xml.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable/mr_button_connecting_light.xml"
+    },
+    {
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/layout_place_autocomplete_item_prediction.xml.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-places-12.0.1.aar/4280f6f557d7ded0453c0d2384b2f515/res/layout/place_autocomplete_item_prediction.xml"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_googleg_standard_color_18.png.flat",
@@ -728,16 +728,16 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable-hdpi-v4/quantum_ic_pause_white_24.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_quantum_ic_forward_30_white_24.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable-mdpi-v4/quantum_ic_forward_30_white_24.png"
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_cast_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable-xhdpi-v4/cast_abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_cast_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable-xhdpi-v4/cast_abc_scrubber_control_to_pressed_mtrl_005.png"
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_quantum_ic_forward_30_white_24.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/play-services-cast-framework-12.0.1.aar/6bc7ddc15eb26e6f2dcfa4025ebee5fb/res/drawable-mdpi-v4/quantum_ic_forward_30_white_24.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_quantum_ic_skip_next_grey600_36.png.flat",
@@ -760,12 +760,12 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-mdpi-v4/ic_mr_button_disconnected_dark.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_audiotrack_dark.png.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xhdpi-v4/ic_audiotrack_dark.png"
-    },
-    {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_disconnected_dark.png.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_disconnected_dark.png"
+    },
+    {
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_audiotrack_dark.png.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xhdpi-v4/ic_audiotrack_dark.png"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_ic_vol_type_speaker_group_light.png.flat",
@@ -784,12 +784,12 @@
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-26.1.0.aar/e8908b45f8c41eef9e68af1a3cb2526d/res/drawable-xxhdpi-v4/ic_mr_button_disconnected_light.png"
     },
     {
-        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_dark.xml.flat",
-        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/color/abc_primary_text_disable_only_material_dark.xml"
-    },
-    {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/layout_abc_select_dialog_material.xml.flat",
         "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/color_abc_primary_text_disable_only_material_dark.xml.flat",
+        "source": "/home/armada-nasar/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/061ded36ca518064007fae629ba35533/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
         "merged": "/home/armada-nasar/Git/budayaid/app/build/intermediates/res/merged/debug/drawable_cast_expanded_controller_bg_gradient_light.xml.flat",
