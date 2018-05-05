@@ -1,7 +1,7 @@
-from flask import Flask, request, render_template, url_for, flash, redirect, send_from_directory
+from flask import Flask, request, render_template, url_for, flash, redirect, send_from_directory, jsonify
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from budayaid_database_config import Base, Province, Budaya
+from budayaid_database_config import Base, Province, Budaya, Categories
 import os
 from werkzeug import secure_filename
 from pathlib import Path
@@ -52,6 +52,9 @@ def add_budaya():
 		
 		image_file = request.files['image_file']
 
+		if ' ' in image_file.filename:
+			flash("No spaces allowed in uploaded file name!")
+			return redirect(url_for('add_budaya'))
 		if image_file.filename == '':
 			flash("Filename could not be empty!")
 			print("Filename could not be empty!")
@@ -98,7 +101,7 @@ def add_budaya():
 		categories = session.query(Categories).all()
 		return render_template('budayaid_add_budaya_page.html', provinces=provinces, categories=categories)
 
-@app.route('/getImage/<string:image_file_name>')
+@app.route('/getImage/<string:image_file_name>/')
 def get_image(image_file_name):
 	path = os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(image_file_name))
 	print(path)
@@ -120,9 +123,22 @@ def moderationtool_detail_edit(item_id):
 	print(request.form['name'])
 	print(request.form['description'])
 	print(request.form['google_search_term'])
-	edited_item.name = request.form['name']
-	edited_item.description = request.form['description']
-	edited_item.google_search_term = request.form['google_search_term']
+	
+	if request.form['name'] == '':
+		edited_item.name = edited_item.name
+	else:
+		edited_item.name = request.form['name']
+	
+	if request.form['description'] == '':
+		edited_item.description = edited_item.description
+	else:
+		edited_item.description = request.form['description']
+	
+	if request.form['google_search_term'] == '':
+		edited_item.google_search_term = edited_item.google_search_term
+	else:
+		edited_item.google_search_term = request.form['google_search_term']
+	
 	session.add(edited_item)
 	session.commit()
 	flash("budaya id=" + str(item_id) + " has been updated :)")
@@ -138,6 +154,21 @@ def moderationtool_detail_delete(item_id):
 		return redirect(url_for('moderationtool'))
 	else:
 		return render_template('budayaid_moderation_tool_delete.html', deleted_item = deleted_item)
+
+#The one and only JSON REST API Endpoint :)
+@app.route('/getJSONBudayasByProvinceId/<int:province_id>')
+def get_budayas_by_province_id(province_id):
+	province_filter = session.query(Province).filter_by(id=province_id).first()
+	#category_filter = session.query(Categories).filter_by(id = category_id).first()
+	budayas = session.query(Budaya).filter_by(province_id = province_filter.id).all()
+	return jsonify(budaya=[b.serialize for b in budayas])
+
+@app.route('/getJSONBudayasByProvinceIdAndCategory/<int:province_id>/<int:category_id>/')
+def get_budayas_by_province_id_and_category(province_id, category_id):
+	province_filter = session.query(Province).filter_by(id=province_id).first()
+	category_filter = session.query(Categories).filter_by(id = category_id).first()
+	budayas = session.query(Budaya).filter_by(province_id = province_filter.id, category = category_filter.id).all()
+	return jsonify(budaya=[b.serialize for b in budayas])
 
 app.secret_key = "budayaid_char6014"
 app.debug = True
