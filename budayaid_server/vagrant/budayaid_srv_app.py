@@ -5,6 +5,7 @@ from budayaid_database_config import Base, Province, Budaya
 import os
 from werkzeug import secure_filename
 from pathlib import Path
+
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './imagepool/'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
@@ -74,15 +75,17 @@ def add_budaya():
 		name=request.form['name']
 		description=request.form['description']
 		prov_val = request.form['province']
-		print("hahahihi")
-		print(prov_val)
+		#print("hahahihi")
+		#print(prov_val)
 		province = session.query(Province).filter_by(id=int(prov_val)).first()
 		google_search_term = request.form['google_search_term']
-
+		category_val = request.form['category']
+		category = session.query(Categories).filter_by(id=int(category_val)).first()
+		#deprecated
 		#WARNING: Dummy province in use! REPLACE BEFORE RELEASE!
-		dumprov = session.query(Province).filter_by(name='dummytes').first()
-		
-		newBudaya = Budaya(name=name, description=description, image_url=image_url, google_search_term=google_search_term, province=province)
+		#dumprov = session.query(Province).filter_by(name='dummytes').first()
+				
+		newBudaya = Budaya(name=name, description=description, image_url=image_url, google_search_term=google_search_term, province=province, category=category_val)
 		
 		session.add(newBudaya)
 		session.commit()
@@ -92,7 +95,8 @@ def add_budaya():
 		return redirect(url_for('add_budaya'))
 	else:
 		provinces = session.query(Province).all()
-		return render_template('budayaid_add_budaya_page.html', provinces=provinces)
+		categories = session.query(Categories).all()
+		return render_template('budayaid_add_budaya_page.html', provinces=provinces, categories=categories)
 
 @app.route('/getImage/<string:image_file_name>/')
 def get_image(image_file_name):
@@ -100,13 +104,46 @@ def get_image(image_file_name):
 	print(path)
 	return send_from_directory('imagepool', secure_filename(image_file_name))
 
+@app.route('/moderationtool/')
+def moderationtool():
+	budayas = session.query(Budaya).all()
+	return render_template('budayaid_moderation_tool.html', budayas=budayas)
+
+@app.route('/moderationtool/detail/<int:item_id>')
+def moderationtool_detail(item_id):
+	item = session.query(Budaya).filter_by(id=item_id).first()
+	return render_template('budayaid_moderation_tool_detail.html', item=item)
+
+@app.route('/moderationtool/detail/<int:item_id>/edit', methods=['POST'])
+def moderationtool_detail_edit(item_id):
+	edited_item = session.query(Budaya).filter_by(id=item_id).first()
+	print(request.form['name'])
+	print(request.form['description'])
+	print(request.form['google_search_term'])
+	edited_item.name = request.form['name']
+	edited_item.description = request.form['description']
+	edited_item.google_search_term = request.form['google_search_term']
+	session.add(edited_item)
+	session.commit()
+	flash("budaya id=" + str(item_id) + " has been updated :)")
+	return redirect(url_for('moderationtool'))
+
+@app.route('/moderationtool/detail/<int:item_id>/delete', methods=['GET', 'POST'])
+def moderationtool_detail_delete(item_id):
+	deleted_item = session.query(Budaya).filter_by(id=item_id).first()
+	if request.method == 'POST':
+		session.delete(deleted_item)
+		session.commit()
+		flash("budaya id=" + str(item_id) + " has been deleted!")
+		return redirect(url_for('moderationtool'))
+	else:
+		return render_template('budayaid_moderation_tool_delete.html', deleted_item = deleted_item)
+
+app.secret_key = "budayaid_char6014"
+app.debug = True
+
 def main():
-	app.secret_key = "budayaid_char6014"
-	app.debug = True
 	app.run(host = '0.0.0.0', port=6014)
 
 if __name__ == '__main__':
 	main()
-
-
-

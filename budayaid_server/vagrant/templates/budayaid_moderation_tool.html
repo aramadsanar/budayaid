@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Moderation Tool</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body width=100%>
+	<div class="container">
+		<h1>Moderation Tool</h1>
+		<br/>
+		<br/>
+		{% with messages = get_flashed_messages()%}
+			<ul>
+			{% for m in messages %}
+				<li>{{m}}</li>	
+			{% endfor %}
+			</ul>
+		{% endwith %}
+
+		<table class="table table-hover">
+			{%for b in budayas%}
+				<tr>
+					<td>{{b.id}}</td>
+					<td>{{b.name}}</td>
+					<td>{{b.description}}</td>
+					<td>{{b.image_url}}</td>
+					<td>{{b.google_search_term}}</td>
+					<td>{{b.province_id|string()}}</td>
+					<td>{{b.category|string()}}</td>
+					<td><a href = "{{url_for('moderationtool_detail', item_id = b.id)}}">Detail</a></td>
+				</tr>
+			{%endfor%}
+		</table>
+	</div>
+</body>
+</html>

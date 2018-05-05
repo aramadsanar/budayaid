@@ -9,7 +9,7 @@
 </head>
 <body width=100%>
 	<div class="container">
-		<h1> Add Budaya Item </h1>
+		<h1> Edit Budaya Item </h1>
 		{% with messages = get_flashed_messages()%}
 			<ul>
 			{% for m in messages %}
@@ -18,41 +18,29 @@
 			</ul>
 		{% endwith %}
 
-		<form action="{{url_for('add_budaya')}}" method = 'POST' enctype = "multipart/form-data">
+		<form action="{{url_for('moderationtool_detail_edit', item_id = item.id)}}" method = 'POST' enctype = "multipart/form-data">
 			<table class="table table-hover">
 				<tr>
 					<td><p>Name:</p></td>
-					<td><input type='text' size='30' class="form-control" name='name'><td>
+					<td><input type='text' size='30' class="form-control" name='name' placeholder="{{item.name}}"><td>
 				</tr>
 
 				<tr>
 					<td><p>Description:</p></td>
-					<td><textarea size='30' class="form-control" rows="5" name='description'></textarea></td>
+					<td><textarea size='30' class="form-control" rows="5" name='description' placeholder="{{item.description}}"></textarea></td>
 				</tr>
 
 				<tr>
 					<td><p>Province:</p></td>
 					<td>
-						<div class="form-group">
-							<select name='province' class="form-control">
-							{% for p in provinces %}
-								<option value="{{p.id|string()}}">{{p.id|string() + " " + p.friendly_name}}</option>
-							{% endfor %}
-							</select>
-						</div>
+						{{item.province.friendly_name}}
 					</td>
 				</tr>
 
 				<tr>
 					<td><p>Category:</p></td>
 					<td>
-						<div class="form-group">
-							<select name='category' class="form-control">
-							{% for c in categories %}
-								<option value="{{c.id|string()}}">{{c.id|string() + " " + c.friendly_name}}</option>
-							{% endfor %}
-							</select>
-						</div>
+						{{item.categories.friendly_name}}
 					</td>
 				</tr>
 				
@@ -62,12 +50,8 @@
 				</tr>
 
 				<tr>
-					<td><p>Upload Image File:</p></td>
-					<td><input class="form-control" type='file' size='30' name='image_file'></td>
-				</tr>
-
-				<tr>
-					<td><input class="btn btn-primary" type='submit' value='Add'></td>
+					<td><input class="btn btn-primary" type='submit' value='Update'></td>
+					<td><a href="{{url_for('moderationtool_detail_delete', item_id=item.id)}}">Delete</a></td>
 				</tr>
 			</table>
 		</form>

@@ -13,6 +13,12 @@ class Province(Base):
 	name = Column(String(250), nullable = False)
 	friendly_name = Column(String(250), nullable = False)
 
+class Categories(Base):
+	__tablename__ = 'categories'
+	id = Column(Integer, primary_key = True)
+	name = Column(String(250), nullable = False)
+	friendly_name = Column(String(250), nullable = False)
+
 class Budaya(Base):
 	__tablename__ = 'budaya'
 	id = Column(Integer, primary_key = True)
@@ -25,6 +31,9 @@ class Budaya(Base):
 	province_id = Column(Integer, ForeignKey('province.id'))
 	province = relationship(Province)
 
+	category = Column(Integer, ForeignKey('categories.id'))
+	categories = relationship(Categories)
+	
 engine = create_engine("sqlite:///budayaid.db")
 
 Base.metadata.create_all(engine)
