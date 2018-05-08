@@ -1,0 +1,4 @@
+python3 budayaid_database_config.py
+python3 budayaid_add_categories.py
+python3 budayaid_populate_provinces.py
+python3 budayaid_create_passphrase_store.py

@@ -18,6 +18,10 @@
 		<form action="{{url_for('moderationtool_detail_delete', item_id = deleted_item.id)}}" method = 'POST' enctype = "multipart/form-data">
 			<table class="table table-hover">
 				<tr>
+					<td><p>Passphrase</p></td>
+					<td><input  type='text' size='30' class="form-control" name='input_passphrase' width=100%></td>
+				</tr>
+				<tr>
 					<td><input class="btn btn-primary" type='submit' value='Delete'></td>
 					<td><a href="{{url_for('moderationtool')}}">Cancel</a></td>
 				</tr>

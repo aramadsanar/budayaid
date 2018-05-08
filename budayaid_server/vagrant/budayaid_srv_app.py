@@ -5,6 +5,9 @@ from budayaid_database_config import Base, Province, Budaya, Categories
 import os
 from werkzeug import secure_filename
 from pathlib import Path
+import hashlib
+from budayaid_create_passphrase_store import Passphrase
+import time, datetime
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = './imagepool/'
@@ -12,6 +15,11 @@ ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 engine = create_engine('sqlite:///budayaid.db?check_same_thread=False')
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
+
+passphrase_engine = create_engine('sqlite:///passphrase.db?check_same_thread=False')
+passphrase_DBSession = sessionmaker(bind=passphrase_engine)
+passphrase_session = passphrase_DBSession()
+
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -39,6 +47,24 @@ def check_file_existence_and_create_alternate_filename_if_exists(filename):
 	else:
 		return filename
 
+def create_alternate_filename(filename):
+	ts = time.time()
+	st = datetime.datetime.fromtimestamp(ts).strftime('%Y_%m_%d_%H_%M_%S')
+
+	new_filename = get_filename_without_extension(filename) + st + "." + get_extension_from_filename(filename)
+	return new_filename
+
+def authenticate(passphrase):
+	if passphrase == None:
+		return False
+	hashed_passphrase = hashlib.md5(passphrase.encode())
+	verify = passphrase_session.query(Passphrase).filter_by(passhash = hashed_passphrase.hexdigest()).first()
+	#print(verify.passhash)
+	if verify == None:
+		return False
+	else:
+		return True
+
 @app.route('/')
 def homepage():
 	return redirect(url_for('add_budaya'))
@@ -46,6 +72,12 @@ def homepage():
 @app.route('/add', methods=['GET', 'POST'])
 def add_budaya():
 	if request.method == 'POST':
+		if not authenticate(request.form['input_passphrase']):
+			flash("wrong password!")
+			return redirect(url_for('add_budaya'))
+		else:
+			flash("okay")
+			#return redirect(url_for('add_budaya'))
 		if 'image_file' not in request.files:
 			flash("You must upload a file!")
 			return redirect(url_for('add_budaya'))
@@ -57,17 +89,19 @@ def add_budaya():
 			return redirect(url_for('add_budaya'))
 		if image_file.filename == '':
 			flash("Filename could not be empty!")
-			print("Filename could not be empty!")
+			#print("Filename could not be empty!")
 			return redirect(url_for('add_budaya'))
 		if not allowed_file(image_file.filename):
 			flash("File type is not alowed!")
-			print("Filename could not be empty!")
+			#print("Filename could not be empty!")
 			return redirect(url_for('add_budaya'))
 
 		image_url = ""
-		alt_filename = check_file_existence_and_create_alternate_filename_if_exists(image_file.filename)
-		print("alternate filename - dup handler: ")
-		print(alt_filename)
+		#tes = create_alternate_filename(image_file.filename)
+		#print(tes)
+		alt_filename = create_alternate_filename(image_file.filename)
+		#print("alternate filename - dup handler: ")
+		#print(alt_filename)
 		if alt_filename == image_file.filename:
 			image_file.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(image_file.filename)))
 			image_url = image_file.filename
@@ -119,6 +153,10 @@ def moderationtool_detail(item_id):
 
 @app.route('/moderationtool/detail/<int:item_id>/edit', methods=['POST'])
 def moderationtool_detail_edit(item_id):
+	if not authenticate(request.form['input_passphrase']):
+		flash("wrong password")
+		return redirect(url_for('moderationtool'))
+
 	edited_item = session.query(Budaya).filter_by(id=item_id).first()
 	print(request.form['name'])
 	print(request.form['description'])
@@ -146,8 +184,12 @@ def moderationtool_detail_edit(item_id):
 
 @app.route('/moderationtool/detail/<int:item_id>/delete', methods=['GET', 'POST'])
 def moderationtool_detail_delete(item_id):
+
 	deleted_item = session.query(Budaya).filter_by(id=item_id).first()
 	if request.method == 'POST':
+		if not authenticate(request.form['input_passphrase']):
+			flash("wrong password")
+			return redirect(url_for('moderationtool'))
 		session.delete(deleted_item)
 		session.commit()
 		flash("budaya id=" + str(item_id) + " has been deleted!")

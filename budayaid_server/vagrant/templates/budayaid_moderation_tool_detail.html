@@ -48,7 +48,10 @@
 					<td><p>Google Search Term</p></td>
 					<td><input placeholder = "{{item.google_search_term}}" type='text' size='30' class="form-control" name='google_search_term' width=100%></td>
 				</tr>
-
+				<tr>
+					<td><p>Passphrase</p></td>
+					<td><input  type='text' size='30' class="form-control" name='input_passphrase' width=100%></td>
+				</tr>
 				<tr>
 					<td><input class="btn btn-primary" type='submit' value='Update'></td>
 					<td><a href="{{url_for('moderationtool_detail_delete', item_id=item.id)}}">Delete</a></td>
