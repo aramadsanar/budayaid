@@ -48,6 +48,8 @@ captures/
 
 # Google Services (e.g. APIs or Firebase)
 google-services.json
+*.jpg
+*.db
 
 # Freeline
 freeline.py
