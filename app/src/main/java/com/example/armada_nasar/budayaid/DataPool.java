@@ -17,4 +17,23 @@ public class DataPool {
         dict.put("tes 2", test2);
     }
 
+    public static String[][] data = new String[][]{
+            {"Budaya 1", "https://wisatabaru.com/wp-content/uploads/2017/11/pulau-derawan-1.jpg"},
+            {"Budaya 2","https://karental.id/wp-content/uploads/2017/05/Jakarta.original.4635.jpg"},
+    };
+
+    public static ArrayList<Budaya> getListData() {
+        Budaya budaya = null;
+        ArrayList<Budaya> list = new ArrayList<>();
+        for (int i = 0; i < data.length; i++) {
+            //buat objek president dari class President.class
+            budaya = new Budaya();
+            budaya.setmAsalKotaBudaya(data[i][0]); //baris i kolom 0 = nama
+            budaya.setmImgURLBudaya(data[i][1]); //baris i kolom 1 = jabatan
+
+            list.add(budaya);
+        }
+        return list;
+    }
+
 }

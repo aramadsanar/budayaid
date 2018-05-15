@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         String imageUri = "http://35.198.228.52:6014/getImage/5f7.jpg/";
         ImageView ivBasicImage = (ImageView) findViewById(R.id.tes);
         Picasso.with(getApplicationContext()).load(imageUri).into(ivBasicImage);
+
     }
 
     /*@Override

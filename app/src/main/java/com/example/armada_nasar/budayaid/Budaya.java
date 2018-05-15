@@ -4,6 +4,11 @@ public class Budaya {
     private String mNamaBudaya, mAsalKotaBudaya, mGoogleSearchTerm, mImgURLBudaya;
     private int mImgResIDBudaya;
 
+    public Budaya()
+    {
+
+    }
+
     public Budaya(String mNamaBudaya, String mAsalKotaBudaya, String mGoogleSearchTerm, int mImgResIDBudaya) {
         this.mNamaBudaya = mNamaBudaya;
         this.mAsalKotaBudaya = mAsalKotaBudaya;

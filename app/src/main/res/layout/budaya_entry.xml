@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_height="wrap_content"
     android:padding="16dp">
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_weight="1.5"
-        android:layout_height="match_parent" />
-    <LinearLayout
-        android:layout_weight="3"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_category"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Nama Budaya"
-            android:textStyle="bold"
-            android:textSize="14sp"
-            android:padding="8dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Asal Kota Budaya"
-            android:padding="8dp"/>
-    </LinearLayout>
-</LinearLayout>
+        android:layout_width="match_parent"/>
+
+</RelativeLayout>
