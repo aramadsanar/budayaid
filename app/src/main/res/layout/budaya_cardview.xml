@@ -8,23 +8,23 @@
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
     android:layout_marginTop="4dp"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <RelativeLayout
+        android:id="@+id/item_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
-        android:padding="8dp"
-        android:id="@+id/item_container">
+        android:padding="8dp">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/img_card"
             android:layout_width="match_parent"
             android:layout_height="220dp"
 
             android:scaleType="centerCrop"
             tools:src="" />
+
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"

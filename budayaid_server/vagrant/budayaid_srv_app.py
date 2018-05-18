@@ -212,6 +212,25 @@ def get_budayas_by_province_id_and_category(province_id, category_id):
 	budayas = session.query(Budaya).filter_by(province_id = province_filter.id, category = category_filter.id).all()
 	return jsonify(budaya=[b.serialize for b in budayas])
 
+@app.route('/getJSONProvinces/')
+def get_provinces():
+	provinces = session.query(Province).all()
+	return jsonify(provinces=[p.serialize for p in provinces])
+
+@app.route('/getJSONProvincesByIslandName/<string:islandName>')
+def get_provinces_by_island_name(islandName):
+	provinces = session.query(Province).filter_by(island=islandName).all()
+	return jsonify(provinces=[p.serialize for p in provinces])
+
+@app.route('/getJSONProvincesNameOnly/')
+def get_provinces_name_only():
+	provinces = session.query(Province).all()
+	province_name_list = []
+	for p in provinces:
+		province_name_list.append(p.name)
+	return jsonify(provinces=[pname for pname in province_name_list])
+
+
 app.secret_key = "budayaid_char6014"
 app.debug = True
 

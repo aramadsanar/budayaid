@@ -3,19 +3,15 @@ package com.example.armada_nasar.budayaid;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -24,25 +20,25 @@ import java.util.ArrayList;
  * Created by Quantum Higgs on 5/15/2018.
  */
 
-public class CardviewAdapter extends RecyclerView.Adapter<CardviewAdapter.CardViewViewHolder> {
+public class ProvinceCardviewAdapter extends RecyclerView.Adapter<ProvinceCardviewAdapter.CardViewViewHolder> {
 
-    private ArrayList<Budaya> listBudaya;
+    private ArrayList<Province> listBudaya;
     private Context context;
     private final String IMG_URL = "http://35.194.234.226:6014/getImage/";
-    public CardviewAdapter(Context context, ArrayList<Budaya> listPresident) {
+    public ProvinceCardviewAdapter(Context context, ArrayList<Province> listPresident) {
         this.context = context;
         this.listBudaya = listPresident;
     }
 
-    public CardviewAdapter(Context context) {
+    public ProvinceCardviewAdapter(Context context) {
         this.context = context;
     }
 
-    public ArrayList< Budaya> getListBudaya() {
+    public ArrayList<Province> getListBudaya() {
         return listBudaya;
     }
 
-    public void setListBudaya(ArrayList<Budaya> listPresident) {
+    public void setListBudaya(ArrayList<Province> listPresident) {
         this.listBudaya = listPresident;
     }
     @Override
@@ -55,15 +51,14 @@ public class CardviewAdapter extends RecyclerView.Adapter<CardviewAdapter.CardVi
     @Override
     public void onBindViewHolder(CardViewViewHolder holder, int position) {
 
-        Budaya p = getListBudaya().get(position);
-
+        final Province p = getListBudaya().get(position);
 
         Picasso.with(context)
-                .load(IMG_URL + p.getmImgURLBudaya())
+                .load(IMG_URL + p.getName())
                 .into(holder.imgPhoto);
-        Log.d("imageurl", IMG_URL + p.getmImgURLBudaya());
+        Log.d("imageurl", IMG_URL + p.getName());
 
-        holder.tvName.setText(p.getmNamaBudaya());
+        holder.tvName.setText(p.getFriendly_name());
 
 
         /*holder.imgPhoto.setOnClickListener(new CustomOnItemClickListener(position, new CustomOnItemClickListener.OnItemClickCallback() {
@@ -77,15 +72,11 @@ public class CardviewAdapter extends RecyclerView.Adapter<CardviewAdapter.CardVi
         holder.item_container.setOnClickListener(new CustomOnItemClickListener(position, new CustomOnItemClickListener.OnItemClickCallback() {
             @Override
             public void onItemClicked(View view, int position) {
-                String url = "http://google.com/search?q=";
-                url += getListBudaya().get(position).getmGoogleSearchTerm();
+                Intent viewBudayaIntent = new Intent(context, ViewBudayaActivity.class);
+                viewBudayaIntent.putExtra("provinceId", p.getId());
+                viewBudayaIntent.putExtra("provinceFriendlyName", p.getFriendly_name());
 
-                Intent googleSearchIntent = new Intent(Intent.ACTION_VIEW);
-                googleSearchIntent.setData(Uri.parse(url));
-
-                if (googleSearchIntent.resolveActivity(view.getContext().getPackageManager()) != null) {
-                    view.getContext().startActivity(googleSearchIntent);
-                }
+                view.getContext().startActivity(viewBudayaIntent);
             }
         }));
 

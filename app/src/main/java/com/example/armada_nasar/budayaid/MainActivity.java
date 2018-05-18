@@ -2,10 +2,13 @@ package com.example.armada_nasar.budayaid;
 
 import android.app.FragmentManager;
 import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TableLayout;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -23,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // SupportMapFragment smf = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        //smf.getMapAsync(this);
-        Intent i = new Intent(this, ViewBudayaActivity.class);
-        startActivity(i);
+        ViewPager provincesViewPager = findViewById(R.id.provincesViewPager);
+        provincesViewPager.setAdapter(new ProvinceFragmentPagerAdapter(this, getSupportFragmentManager()));
 
+        TabLayout provincesTabLayout = findViewById(R.id.provincesTabLayout);
+        provincesTabLayout.setupWithViewPager(provincesViewPager);
     }
 }
