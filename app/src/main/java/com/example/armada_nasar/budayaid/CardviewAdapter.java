@@ -77,15 +77,14 @@ public class CardviewAdapter extends RecyclerView.Adapter<CardviewAdapter.CardVi
         holder.item_container.setOnClickListener(new CustomOnItemClickListener(position, new CustomOnItemClickListener.OnItemClickCallback() {
             @Override
             public void onItemClicked(View view, int position) {
+                Budaya budaya = getListBudaya().get(position);
                 String url = "http://google.com/search?q=";
-                url += getListBudaya().get(position).getmGoogleSearchTerm();
-
-                Intent googleSearchIntent = new Intent(Intent.ACTION_VIEW);
-                googleSearchIntent.setData(Uri.parse(url));
-
-                if (googleSearchIntent.resolveActivity(view.getContext().getPackageManager()) != null) {
-                    view.getContext().startActivity(googleSearchIntent);
-                }
+                url += budaya.getmGoogleSearchTerm();
+                
+                Intent webViewIntent = new Intent(context, WebViewActivity.class);
+                webViewIntent.putExtra("query", budaya.getmGoogleSearchTerm());
+                webViewIntent.putExtra("title", budaya.getmNamaBudaya());
+                view.getContext().startActivity(webViewIntent);
             }
         }));
 

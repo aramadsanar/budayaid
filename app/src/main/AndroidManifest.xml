@@ -24,7 +24,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD5fQZF458EfhWdPikZMRQFYFCjWJAjNnk" />
 
-        <activity android:name=".ViewBudayaActivity"></activity>
+        <activity android:name=".ViewBudayaActivity" />
+        <activity android:name=".WebViewActivity"></activity>
     </application>
 
 </manifest>
